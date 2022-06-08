@@ -12,8 +12,7 @@
     isNode = (node) => node instanceof Node,
     // recursively appends children to given element
     appendChild = (element, child) => {
-      if (child != null) {
-        // check for null and undefined
+      if (child) {
         if (Array.isArray(child)) {
           // support (deeply) nested child elements
           child.map((subChild) => appendChild(element, subChild));
