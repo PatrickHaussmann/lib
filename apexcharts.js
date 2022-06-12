@@ -3,6 +3,10 @@
  * (c) 2018-2022 ApexCharts
  * Released under the MIT License.
  */
+
+// from: https://cdn.jsdelivr.net/npm/apexcharts@3.35.3/dist/apexcharts.js
+// only change is on line 24748
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -24740,7 +24744,7 @@
           }
         } else {
           if (gl.axisCharts) {
-            gl.svgHeight = gl.svgWidth / 1.61;
+            gl.svgHeight = gl.svgWidth / (cnf.aspectRatio||1.61);
           } else {
             gl.svgHeight = gl.svgWidth / 1.2;
           }
